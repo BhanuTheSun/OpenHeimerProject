@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.9.6 on win32)" generated="20221219 18:24:46.732" rpa="false" schemaversion="3">
+<suite id="s1" name="Dispense Amout" source="G:\Openheimer_Project\TestSuite\FunctionalTests\dispense_amout.robot">
+<test id="s1-t1" name="TC01_functionality_of_Browse_button" line="8">
+<kw name="GoTo_Landing_Page">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221219 18:24:47.008" level="INFO">Opening browser 'chrome' to base url 'http://localhost:8080/'.</msg>
+<status status="PASS" starttime="20221219 18:24:47.007" endtime="20221219 18:24:51.191"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221219 18:24:51.191" endtime="20221219 18:24:51.307"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>2seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221219 18:24:51.307" endtime="20221219 18:24:51.307"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${welcome_text}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20221219 18:24:51.308" endtime="20221219 18:24:53.333"/>
+</kw>
+<status status="PASS" starttime="20221219 18:24:47.007" endtime="20221219 18:24:53.333"/>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<arg>${browse_locator}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20221219 18:24:53.335" endtime="20221219 18:24:59.409"/>
+</kw>
+<kw name="Choose File" library="SeleniumLibrary">
+<arg>${browse_locator}</arg>
+<arg>${workingclassheroes_csv_file}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<msg timestamp="20221219 18:24:59.410" level="INFO">Sending G:\Openheimer_Project\workingclassheroes.csv to browser.</msg>
+<status status="PASS" starttime="20221219 18:24:59.409" endtime="20221219 18:25:03.523"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221219 18:25:03.524" endtime="20221219 18:25:07.711"/>
+</kw>
+<status status="PASS" starttime="20221219 18:24:47.006" endtime="20221219 18:25:07.713"/>
+</test>
+<test id="s1-t2" name="TC03_functionality_of_UploadCSVfile" line="13">
+<kw name="GoTo_Landing_Page">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221219 18:25:07.717" level="INFO">Opening browser 'chrome' to base url 'http://localhost:8080/'.</msg>
+<status status="PASS" starttime="20221219 18:25:07.717" endtime="20221219 18:25:13.741"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221219 18:25:13.742" endtime="20221219 18:25:15.891"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>2seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221219 18:25:15.891" endtime="20221219 18:25:15.891"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${welcome_text}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20221219 18:25:15.891" endtime="20221219 18:25:17.905"/>
+</kw>
+<status status="PASS" starttime="20221219 18:25:07.717" endtime="20221219 18:25:17.905"/>
+</kw>
+<kw name="Choose File" library="SeleniumLibrary">
+<arg>${browse_locator}</arg>
+<arg>${workingclassheroes_csv_file}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<msg timestamp="20221219 18:25:17.906" level="INFO">Sending G:\Openheimer_Project\workingclassheroes.csv to browser.</msg>
+<status status="PASS" starttime="20221219 18:25:17.905" endtime="20221219 18:25:21.967"/>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<arg>${upload_csv_file_locator}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20221219 18:25:21.967" endtime="20221219 18:25:28.101"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${upload_csv_file_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221219 18:25:28.105" level="INFO">Clicking element '//span[@class="input-group-text"]'.</msg>
+<status status="PASS" starttime="20221219 18:25:28.102" endtime="20221219 18:25:32.198"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221219 18:25:32.199" endtime="20221219 18:25:36.317"/>
+</kw>
+<status status="PASS" starttime="20221219 18:25:07.716" endtime="20221219 18:25:36.317"/>
+</test>
+<test id="s1-t3" name="TC04_functionality_of_Refresh_Tax_Relief_Table" line="19">
+<kw name="GoTo_Landing_Page">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221219 18:25:36.325" level="INFO">Opening browser 'chrome' to base url 'http://localhost:8080/'.</msg>
+<status status="PASS" starttime="20221219 18:25:36.325" endtime="20221219 18:25:42.157"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221219 18:25:42.158" endtime="20221219 18:25:44.329"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>2seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221219 18:25:44.329" endtime="20221219 18:25:44.330"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${welcome_text}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20221219 18:25:44.330" endtime="20221219 18:25:46.356"/>
+</kw>
+<status status="PASS" starttime="20221219 18:25:36.325" endtime="20221219 18:25:46.356"/>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<arg>${Refresh_tax_relief_button}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20221219 18:25:46.356" endtime="20221219 18:25:52.456"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Refresh_tax_relief_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221219 18:25:52.456" level="INFO">Clicking element '//button[@class="btn btn-primary"]'.</msg>
+<status status="PASS" starttime="20221219 18:25:52.456" endtime="20221219 18:25:56.597"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221219 18:25:56.597" endtime="20221219 18:26:00.681"/>
+</kw>
+<status status="PASS" starttime="20221219 18:25:36.323" endtime="20221219 18:26:00.683"/>
+</test>
+<test id="s1-t4" name="TC15_text_on_button_DispenseNow" line="24">
+<kw name="GoTo_Landing_Page">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221219 18:26:00.688" level="INFO">Opening browser 'chrome' to base url 'http://localhost:8080/'.</msg>
+<status status="PASS" starttime="20221219 18:26:00.688" endtime="20221219 18:26:06.934"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221219 18:26:06.934" endtime="20221219 18:26:09.094"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>2seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221219 18:26:09.094" endtime="20221219 18:26:09.094"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${welcome_text}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20221219 18:26:09.094" endtime="20221219 18:26:11.108"/>
+</kw>
+<status status="PASS" starttime="20221219 18:26:00.688" endtime="20221219 18:26:11.108"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${dispence_button}</arg>
+<arg>Dispense Now</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20221219 18:26:11.108" level="INFO">Verifying element '//*[@id="contents"]/a[2]' contains exact text 'Dispense Now'.</msg>
+<status status="PASS" starttime="20221219 18:26:11.108" endtime="20221219 18:26:15.173"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221219 18:26:15.173" endtime="20221219 18:26:19.296"/>
+</kw>
+<doc>Validate the text on button must be exactly “Dispense Now”</doc>
+<status status="PASS" starttime="20221219 18:26:00.688" endtime="20221219 18:26:19.297"/>
+</test>
+<test id="s1-t5" name="TC16_click_dispence_directs_to_page_with_text_Cashdispensed" line="29">
+<kw name="GoTo_Landing_Page">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221219 18:26:19.309" level="INFO">Opening browser 'chrome' to base url 'http://localhost:8080/'.</msg>
+<status status="PASS" starttime="20221219 18:26:19.302" endtime="20221219 18:26:25.322"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221219 18:26:25.322" endtime="20221219 18:26:27.495"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>2seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221219 18:26:27.495" endtime="20221219 18:26:27.496"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${welcome_text}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20221219 18:26:27.496" endtime="20221219 18:26:29.527"/>
+</kw>
+<status status="PASS" starttime="20221219 18:26:19.302" endtime="20221219 18:26:29.527"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${dispence_url_name}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20221219 18:26:29.528" level="INFO">Clicking link 'Dispense Now'.</msg>
+<status status="PASS" starttime="20221219 18:26:29.527" endtime="20221219 18:26:36.134"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${result_text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221219 18:26:40.194" level="INFO">Current page contains text 'Cash dispensed'.</msg>
+<status status="PASS" starttime="20221219 18:26:36.134" endtime="20221219 18:26:40.194"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221219 18:26:40.196" endtime="20221219 18:26:44.334"/>
+</kw>
+<doc>This Test Case verifies a click on "Dispense Now" button directs to a page
+with a text that says “Cash dispensed”</doc>
+<status status="PASS" starttime="20221219 18:26:19.302" endtime="20221219 18:26:44.334"/>
+</test>
+<test id="s1-t6" name="TC14_validate_button_is_redcolor" line="36">
+<kw name="GoTo_Landing_Page">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221219 18:26:44.339" level="INFO">Opening browser 'chrome' to base url 'http://localhost:8080/'.</msg>
+<status status="PASS" starttime="20221219 18:26:44.339" endtime="20221219 18:26:50.274"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221219 18:26:50.274" endtime="20221219 18:26:52.425"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>2seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221219 18:26:52.425" endtime="20221219 18:26:52.425"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${welcome_text}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20221219 18:26:52.425" endtime="20221219 18:26:54.461"/>
+</kw>
+<status status="PASS" starttime="20221219 18:26:44.339" endtime="20221219 18:26:54.461"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<var>${bgcolor}</var>
+<arg>return document.defaultView.getComputedStyle(document.getElementsByClassName("btn btn-danger btn-block"),null)['background-color']</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20221219 18:26:54.461" level="INFO">Executing JavaScript:
+return document.defaultView.getComputedStyle(document.getElementsByClassName("btn btn-danger btn-block"),null)['background-color']
+Without any arguments.</msg>
+<msg timestamp="20221219 18:26:56.628" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-13.png"&gt;&lt;img src="selenium-screenshot-13.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20221219 18:26:56.628" level="FAIL">JavascriptException: Message: javascript error: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'.
+  (Session info: chrome=108.0.5359.125)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x0067ACD3+2075859]
+	Ordinal0 [0x0060EE61+1633889]
+	Ordinal0 [0x0050B7BD+571325]
+	Ordinal0 [0x0050E374+582516]
+	Ordinal0 [0x0050E225+582181]
+	Ordinal0 [0x0050EBA5+584613]
+	Ordinal0 [0x0056BF4F+966479]
+	Ordinal0 [0x0055731C+881436]
+	Ordinal0 [0x0056B56A+963946]
+	Ordinal0 [0x00557136+880950]
+	Ordinal0 [0x0052FEFD+720637]
+	Ordinal0 [0x00530F3F+724799]
+	GetHandleVerifier [0x0092EED2+2769538]
+	GetHandleVerifier [0x00920D95+2711877]
+	GetHandleVerifier [0x0070A03A+521194]
+	GetHandleVerifier [0x00708DA0+516432]
+	Ordinal0 [0x0061682C+1665068]
+	Ordinal0 [0x0061B128+1683752]
+	Ordinal0 [0x0061B215+1683989]
+	Ordinal0 [0x00626484+1729668]
+	BaseThreadInitThunk [0x770CFEF9+25]
+	RtlGetAppContainerNamedObjectPath [0x77D07BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x77D07B8E+238]
+</msg>
+<status status="FAIL" starttime="20221219 18:26:54.461" endtime="20221219 18:26:56.628"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Backgroud Color ${bgcolor}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20221219 18:26:56.628" endtime="20221219 18:26:56.628"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221219 18:26:56.628" endtime="20221219 18:27:00.712"/>
+</kw>
+<doc>Validate the button on the screen must be red-colored</doc>
+<status status="FAIL" starttime="20221219 18:26:44.339" endtime="20221219 18:27:00.714">JavascriptException: Message: javascript error: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'.
+  (Session info: chrome=108.0.5359.125)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x0067ACD3+2075859]
+	Ordinal0 [0x0060EE61+1633889]
+	Ordinal0 [0x0050B7BD+571325]
+	Ordinal0 [0x0050E374+582516]
+	Ordinal0 [0x0050E225+582181]
+	Ordinal0 [0x0050EBA5+584613]
+	Ordinal0 [0x0056BF4F+966479]
+	Ordinal0 [0x0055731C+881436]
+	Ordinal0 [0x0056B56A+963946]
+	Ordinal0 [0x00557136+880950]
+	Ordinal0 [0x0052FEFD+720637]
+	Ordinal0 [0x00530F3F+724799]
+	GetHandleVerifier [0x0092EED2+2769538]
+	GetHandleVerifier [0x00920D95+2711877]
+	GetHandleVerifier [0x0070A03A+521194]
+	GetHandleVerifier [0x00708DA0+516432]
+	Ordinal0 [0x0061682C+1665068]
+	Ordinal0 [0x0061B128+1683752]
+	Ordinal0 [0x0061B215+1683989]
+	Ordinal0 [0x00626484+1729668]
+	BaseThreadInitThunk [0x770CFEF9+25]
+	RtlGetAppContainerNamedObjectPath [0x77D07BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x77D07B8E+238]
+</status>
+</test>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20221219 18:27:00.724" endtime="20221219 18:27:00.724"/>
+</kw>
+<status status="FAIL" starttime="20221219 18:24:46.733" endtime="20221219 18:27:00.724"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="5" fail="1" skip="0" id="s1" name="Dispense Amout">Dispense Amout</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

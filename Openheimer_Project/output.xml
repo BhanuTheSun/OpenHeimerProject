@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.9.6 on win32)" generated="20221219 15:45:41.213" rpa="false" schemaversion="3">
+<suite id="s1" name="Dispense Amout" source="G:\Openheimer_Project\TestSuite\FunctionalTests\dispense_amout.robot">
+<test id="s1-t1" name="TC01_functionality_of_Browse_button" line="6">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221219 15:45:41.896" level="INFO">Opening browser 'chrome' to base url 'http://localhost:8080/'.</msg>
+<status status="PASS" starttime="20221219 15:45:41.895" endtime="20221219 15:45:49.822"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221219 15:45:49.823" endtime="20221219 15:45:49.940"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>2seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221219 15:45:49.940" endtime="20221219 15:45:49.940"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${welcome_text}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20221219 15:45:49.940" endtime="20221219 15:45:52.004"/>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<arg>//*[@id="contents"]/div[1]/div[2]/input</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20221219 15:45:52.004" endtime="20221219 15:45:58.903"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//*[@id="contents"]/div[1]/div[2]/input</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221219 15:45:58.903" level="INFO">Clicking button '//*[@id="contents"]/div[1]/div[2]/input'.</msg>
+<msg timestamp="20221219 15:46:05.293" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20221219 15:46:05.294" level="FAIL">InvalidArgumentException: Message: invalid argument
+  (Session info: chrome=108.0.5359.125)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x0067ACD3+2075859]
+	Ordinal0 [0x0060EE61+1633889]
+	Ordinal0 [0x0050B680+571008]
+	Ordinal0 [0x0053243A+730170]
+	Ordinal0 [0x0055731C+881436]
+	Ordinal0 [0x005315BF+726463]
+	Ordinal0 [0x00557534+881972]
+	Ordinal0 [0x0056B56A+963946]
+	Ordinal0 [0x00557136+880950]
+	Ordinal0 [0x0052FEFD+720637]
+	Ordinal0 [0x00530F3F+724799]
+	GetHandleVerifier [0x0092EED2+2769538]
+	GetHandleVerifier [0x00920D95+2711877]
+	GetHandleVerifier [0x0070A03A+521194]
+	GetHandleVerifier [0x00708DA0+516432]
+	Ordinal0 [0x0061682C+1665068]
+	Ordinal0 [0x0061B128+1683752]
+	Ordinal0 [0x0061B215+1683989]
+	Ordinal0 [0x00626484+1729668]
+	BaseThreadInitThunk [0x770CFEF9+25]
+	RtlGetAppContainerNamedObjectPath [0x77D07BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x77D07B8E+238]
+</msg>
+<status status="FAIL" starttime="20221219 15:45:58.903" endtime="20221219 15:46:05.632"/>
+</kw>
+<status status="FAIL" starttime="20221219 15:45:41.894" endtime="20221219 15:46:05.632">InvalidArgumentException: Message: invalid argument
+  (Session info: chrome=108.0.5359.125)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x0067ACD3+2075859]
+	Ordinal0 [0x0060EE61+1633889]
+	Ordinal0 [0x0050B680+571008]
+	Ordinal0 [0x0053243A+730170]
+	Ordinal0 [0x0055731C+881436]
+	Ordinal0 [0x005315BF+726463]
+	Ordinal0 [0x00557534+881972]
+	Ordinal0 [0x0056B56A+963946]
+	Ordinal0 [0x00557136+880950]
+	Ordinal0 [0x0052FEFD+720637]
+	Ordinal0 [0x00530F3F+724799]
+	GetHandleVerifier [0x0092EED2+2769538]
+	GetHandleVerifier [0x00920D95+2711877]
+	GetHandleVerifier [0x0070A03A+521194]
+	GetHandleVerifier [0x00708DA0+516432]
+	Ordinal0 [0x0061682C+1665068]
+	Ordinal0 [0x0061B128+1683752]
+	Ordinal0 [0x0061B215+1683989]
+	Ordinal0 [0x00626484+1729668]
+	BaseThreadInitThunk [0x770CFEF9+25]
+	RtlGetAppContainerNamedObjectPath [0x77D07BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x77D07B8E+238]
+</status>
+</test>
+<status status="FAIL" starttime="20221219 15:45:41.221" endtime="20221219 15:46:05.632"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Dispense Amout">Dispense Amout</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

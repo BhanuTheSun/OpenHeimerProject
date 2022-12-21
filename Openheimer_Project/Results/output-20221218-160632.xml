@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.9.6 on win32)" generated="20221218 16:06:32.989" rpa="false" schemaversion="3">
+<suite id="s1" name="TestSuite" source="G:\Openheimer_Project\TestSuite">
+<suite id="s1-s1" name="FunctionalTests" source="G:\Openheimer_Project\TestSuite\FunctionalTests">
+<suite id="s1-s1-s1" name="Dispense Amout" source="G:\Openheimer_Project\TestSuite\FunctionalTests\dispense_amout.robot">
+<test id="s1-s1-s1-t1" name="dispense test" line="6">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221218 16:06:33.217" level="INFO">Opening browser 'chrome' to base url 'http://localhost:8080/'.</msg>
+<status status="PASS" starttime="20221218 16:06:33.217" endtime="20221218 16:06:38.394"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221218 16:06:38.395" endtime="20221218 16:06:38.519"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>2seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221218 16:06:38.519" endtime="20221218 16:06:38.519"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${welcome_text}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20221218 16:06:38.519" endtime="20221218 16:06:40.548"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${dispence_url_name}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20221218 16:06:40.548" level="INFO">Clicking link 'Dispense Now'.</msg>
+<status status="PASS" starttime="20221218 16:06:40.548" endtime="20221218 16:06:46.891"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${result_text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221218 16:06:50.915" level="INFO">Current page contains text 'Cash dispensed'.</msg>
+<status status="PASS" starttime="20221218 16:06:46.891" endtime="20221218 16:06:50.915"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221218 16:06:50.915" endtime="20221218 16:06:54.982"/>
+</kw>
+<doc>verify dispence now button functionality</doc>
+<status status="PASS" starttime="20221218 16:06:33.217" endtime="20221218 16:06:54.982"/>
+</test>
+<status status="PASS" starttime="20221218 16:06:33.021" endtime="20221218 16:06:54.982"/>
+</suite>
+<status status="PASS" starttime="20221218 16:06:33.005" endtime="20221218 16:06:54.997"/>
+</suite>
+<status status="PASS" starttime="20221218 16:06:32.989" endtime="20221218 16:06:54.997"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TestSuite">TestSuite</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="FunctionalTests">TestSuite.FunctionalTests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Dispense Amout">TestSuite.FunctionalTests.Dispense Amout</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
